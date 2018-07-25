@@ -2,8 +2,7 @@
     session_start();
 
     if (!isset($_SESSION['luser'])) {
-        echo "Please Login again";
-        echo "<a href='http://localhost/suraudigital/login.php'>Click Here to Login</a>";
+        echo "Please Login again!</br><a href='http://localhost/suraudigital/login.php'>Click Here to Login</a>";
     }
     else {
         // Checking time when home page starts
@@ -11,7 +10,7 @@
 
         if ($now > $_SESSION['expire']) {
             session_destroy();
-            echo "Your session has expired! <a href='http://localhost/suraudigital/login.php'>Login here</a>";
+            echo "Your session has expired!</br><a href='http://localhost/suraudigital/login.php'>Login here</a>";
         }
         else {
 ?>
